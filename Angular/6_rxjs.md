@@ -19,7 +19,10 @@ height$.subscribe(val => console.long(val))
 - map 、mapTo（返回固定常量）、 pluck（用于取对象某个键上的值）
 - combinelatest 两个流进行合并，并且只要有一个流发生变化，就重新计算；
 - zip 两个流合并，并且要两个流都发生改变的情况下重新计算，适用于两个值是相互依赖的；
+<<<<<<< HEAD
 
+=======
+>>>>>>> aeb163642762e31349961769d1ef1b25487343c6
 - obervable三种状态对应subscribe里实现的三个方法：Never 、empty、throw 对应  next error complete
 - do 工具类，在当前操作符生效之后，下一个操作符生效之前进行某类操作
 - scan reduce(对于无限的流是不会reduce完的) 数组类操作符
@@ -32,3 +35,8 @@ height$.subscribe(val => console.long(val))
 - flatmap（拍扁流中的流 ）、 switchmap（一旦有新的流将抛弃原来的流） 、mergeMap（保留所有的流）
 - 表单控件里的valueChanges
 ![avatar](./img/20190807213807.png)  
+<<<<<<< HEAD
+=======
+- 流中有流的处理： FlatMap（mergeMap）、switchmap（在发生变化时，会断掉之前的流，产生一个  新流）
+- take(1) 相当于在监听一次变化后取消订阅
+>>>>>>> aeb163642762e31349961769d1ef1b25487343c6
