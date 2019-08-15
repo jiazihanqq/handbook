@@ -35,8 +35,5 @@ height$.subscribe(val => console.long(val))
 - flatmap（拍扁流中的流 ）、 switchmap（一旦有新的流将抛弃原来的流） 、mergeMap（保留所有的流）
 - 表单控件里的valueChanges
 ![avatar](./img/20190807213807.png)  
-<<<<<<< HEAD
-=======
 - 流中有流的处理： FlatMap（mergeMap）、switchmap（在发生变化时，会断掉之前的流，产生一个  新流）
 - take(1) 相当于在监听一次变化后取消订阅
->>>>>>> aeb163642762e31349961769d1ef1b25487343c6
