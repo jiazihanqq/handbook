@@ -18,9 +18,9 @@ var arr = Array.prototype.slice.call(arrayLike);
 （3）利用call做继承
 
 ### 实现call和bind 
-（1）改变this的指向
-（2）给定参数执行函数
-（3）this不传的时候相当于指向window
+* 改变this的指向
+* 给定参数执行函数
+* this不传的时候相当于指向window
 
 https://www.jianshu.com/p/af3f41d8ef99
 
