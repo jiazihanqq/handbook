@@ -1,7 +1,7 @@
 # 标题
 
 ## 用一句话概述
-生成了一系列文件和可用的命令（ng-serve， ng-build）
+Angular Cli 是基于 Webpack 封闭的一个Angular命令行工具，生成了一系列文件和可用的命令（ng-serve， ng-build）
 
 ## 原理
 - editorconfig 在不同的编译器中维持相同的代码风格
@@ -13,7 +13,10 @@
 - tsconfig.json typescript 语言的全局配置
 - tslint 代码扫描，书写代码的时候，检查代码风格
 ## 实现
-
+angular-cli的优点：压缩率极高
+- scripts
+- styles
+- 自动内置了ng的一些命令
 ## 使用
 
 ## 引申
