@@ -2,16 +2,17 @@
 
 
 ## 用一句话概述
-状态就是影响到ui变化的数据，（全局、唯一、每次都会返回新的状态）
-redux 一般在coremodule中import  
+状态指的是影响到ui变化的数据，使用store维护的状态具有全局、唯一、每次都会返回新的状态的特点。
+redux 一般在coremodule中引入  
 好处：   
 （1）不会直接操作状态，避免多人协作造成的混乱    
 （2）把对内存数据的修改，从组件中剥离开  
 ![avatar](./img/20190819222221.png)  
 
 Effect角色是对reducer的补充，
-reducer用来专门处理内部的数据变化，effects用来处理外部的数据变化
+reducer用来专门处理内部的状态的变化，effects用来处理外部的变化（泛指UI相关，状态之外的变化），比如http请求，dom操作等等。并且使使用者可以直接和store$流对话，不在关系其他的角色是如何处理的。
 ![avatar](./img/20190819233231.png)  
+![avatar](./img/20190820110007.png)  
 
 ## 原理
 reducer 
@@ -70,9 +71,14 @@ store
 
 - effects的实现
 ```
-    <!-- 通过ofType捕捉LOAD的action，在得到之后要做一些操作 -->
+    <!-- 通过ofType筛选捕捉LOAD的action，在得到之后要做一些操作 -->
+    <!-- ofType的作用是筛选什么样的操作符 -->
     quote$: observable<Action> = this.action$.ofType(action.LOAD)
     .map(toPayLoad)
+
+    <!-- 原来的调用部分改造成 只负责发出消息和获取结果-->
+    this.quote$ = this.store.select(getQuote);
+    this.$store.dispatch(new actions.LoadActio(null));
 ```
 ## 实现
 
