@@ -1,7 +1,8 @@
-# geojson格式与交互设计
+# GeoJSON格式
 
 ## 概述
-可用于dataviz渲染的geojson文件应按照标准的geojson格式，可以根据需要并在geojson规则约束下拓展，如下结构：
+GeoJSON文件是指使用对象的形式，表达地理空间数据的JSON文件。文件内容中定义了多种类型的JSON对象结构，可表述不同类型的地理要素、属性以及空间范围。dataviz所使用的GeoJSON文件，采用的是RFC7946标准（2016年8月发布），由互联网工程任务组（IETF）与原始规范作者共同制定，（官网：http://www.rfc-editor.org/info/rfc7946）。  
+可用于dataviz渲染的GeoJSON文件应按照标准的GeoJSON格式，可以根据需要并在GeoJSON规则约束下拓展，如下结构：
 ```
 {
   "type": "FeatureCollection",
@@ -20,7 +21,7 @@
 
 ## geometry属性格式
 
-geojson将所有的地理要素分为Point、MultiPoint、LineString、MultiLineString、Polygon、MultiPolygon。geometry和properties的对应关系如下：
+GeoJSON将所有的地理要素分为Point、MultiPoint、LineString、MultiLineString、Polygon、MultiPolygon。geometry和properties的对应关系如下：
 
 - Point（单点要素）
 ```
@@ -185,6 +186,6 @@ geojson将所有的地理要素分为Point、MultiPoint、LineString、MultiLine
 - "material":{
     "wall":"stone",
     "window":"woods",
-    "filling":"brick",
+    "filling":"brick"
 }
 - "facility":["Tap water","electric power","natural gas"]
