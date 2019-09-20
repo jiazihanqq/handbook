@@ -1,5 +1,20 @@
 # mode
-
+## 文件的划分
+### 两个打版文件 
+- webpack.dev.js
+- webpack.prod.js
+缺点：两个文件中会有大量重复的代码
+### 三个文件
+- webpack.dev.js
+- webpack.prod.js
+- webpack.common.js
+webpack.common.js用来记录重复的代码
+使用webpack-merge合并打包代码
+```
+const commonConfig = reqiure("./webpack.common.js")
+const devConfig = {}
+module.exports = merge(commonConfig, devConfig)
+```
 ## devtool
 使用devtool配置sourcemap的策略
 
