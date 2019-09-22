@@ -78,3 +78,5 @@ module:{
     }]
 }
 ```
+## perfoemance 
+去掉打包警告

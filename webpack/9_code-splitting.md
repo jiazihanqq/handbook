@@ -59,7 +59,7 @@ cacheGroups:{  // 缓存组，将符合条件的代码放到一起
 }
 minSize:30000// 大于此阈值的文件，才会做代码分割
 maxSize: 50000// 大于此阈值的文件，将会被拆分多个50kb的文件
-minChunks:2// 至少用到两次以上，才会分割成独立文件  
+minChunks:2// 打包好的chunks文件至少用到两次该文件，此文件才会分割成独立文件  
 #### 异步加载文件：babel-plugin-dynamic-import-webpack或者babel/plugin-syntax-dynamic-import
 第一种插件的缺点： 不能将文件智慧命名，例如下面的代码，将文件重命名为lodash
 ```
