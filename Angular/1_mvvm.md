@@ -12,7 +12,7 @@ MVVM模式：关注Model的变化，让MVVM框架去自动更新DOM的状态，�
 ## 实现
 vm是一整套机制：不同框架对于vm的实现有所不同（双向数据绑定）：
 - angularjs
-在每一个scope下，都有一个watcher负责watch队列  
+在每一个scope下，都有一个watchers负责watch队列  
 当我们每次绑定到UI上的时候就自动创建一个$watch，并把它放到 $watchers  
 当触发脏检查的事件发生时，digest就会循环遍历watch，此过程不断循环直到所有的watch都没有变化，之后送到view中渲染。
 

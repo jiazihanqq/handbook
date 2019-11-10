@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>左侧定宽，右侧自适应</title>
+    <style type="text/css">
+#left {
+    margin-right: 10px;
+    float: left;  /*只设置浮动,不设宽度*/
+    height: 500px;
+    background-color: #f00;
+}
+#right {
+    overflow: hidden;  /*触发bfc*/
+    height: 500px;
+    background-color: #0f0;
+}
+
+    </style>
+</head>
+<body>
+    <div id="left">左列定宽</div>
+    <div id="right">右列自适应</div>
+</body>
+</html>

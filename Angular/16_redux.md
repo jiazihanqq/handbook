@@ -1,6 +1,10 @@
 # redux
-
-
+全局的内存数据库，存放着应用所有的状态（UI状态、数据状态）
+action: 相当于事件
+reducer：纯函数，相当于事件的处理器
+store：状态的存储器，用于dispatch存储状态，也可以select读取状态
+比如登录状态需要在多个模块中获取：header和main和project，每个模块需要根据这个状态做出各自的反应，
+那么就可以考虑使用redux策略
 ## 用一句话概述
 状态指的是影响到ui变化的数据，使用store维护的状态具有全局、唯一、每次都会返回新的状态的特点。
 redux 一般在coremodule中引入  
@@ -10,7 +14,9 @@ redux 一般在coremodule中引入
 ![avatar](./img/20190819222221.png)  
 
 Effect角色是对reducer的补充，
-reducer用来专门处理内部的状态的变化，effects用来处理外部的变化（泛指UI相关，状态之外的变化），比如http请求，dom操作等等。并且使使用者可以直接和store$流对话，不在关系其他的角色是如何处理的。
+reducer用来专门处理内部的状态的变化，effects用来处理外部的变化（泛指UI相关，状态之外的变化），比如http请求，dom操作等等。并且使使用者可以直接和store$流对话，不在关心其他的角色是如何处理的。
+UI相关的内存数据的改变->reducer
+UI相关，状态之外的改变 -> effects
 ![avatar](./img/20190819233231.png)  
 ![avatar](./img/20190820110007.png)  
 
